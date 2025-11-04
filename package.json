@@ -38,6 +38,7 @@
     "build-version": "tsx scripts/build-version.ts",
     "prebuild": "run-p clean build-version",
     "build": "vite build",
+    "prepare": "npm run build",
     "preview": "vite preview",
     "unpub": "npm unpublish",
     "pub": "cd dist && npm publish --access=public --registry=https://registry.npmjs.com"
