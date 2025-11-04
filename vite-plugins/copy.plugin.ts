@@ -57,6 +57,7 @@ export function copyPackageJsonPlugin(): Plugin {
                         './lib/style.css': './lib/style.css',
                         './*': './*',
                     },
+                    dependencies: packageJson.dependencies,
                     peerDependencies: packageJson.peerDependencies,
                     description: packageJson.description,
                     keywords: packageJson.keywords,
