@@ -1,5 +1,6 @@
 import DocxPreview from './supports/docx-preview/index'
 import XlsxPreview from './supports/xlsx-preview/index'
+import PptPreview from './supports/ppt-preview/index'
 import PdfPreview from './supports/pdf-preview/index'
 import PicPreview from './supports/pic-preview/index'
 import TxtPreview from './supports/txt-preview/index'
@@ -51,7 +52,7 @@ export const PreviewRules: Record<PreviewType, IPreviewRule> = {
     // ppt: presentation
     [PreviewType.PPT]: {
         name: '',
-        component: void 0,
+        component: PptPreview,
         type: PreviewType.PPT,
         accept: ['ppt', 'pptx', 'fodp', 'odp', 'otp', 'pot', 'potm', 'potx', 'pps', 'ppsm', 'ppsx', 'pptm'],
     },

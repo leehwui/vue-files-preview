@@ -44,5 +44,9 @@ function errorHandler(): void {
 </template>
 
 <style scoped lang="scss">
-
+.xlsx-preview {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
 </style>

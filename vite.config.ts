@@ -47,7 +47,9 @@ export default defineConfig({
             esmExternals: true,
         },
         rollupOptions: {
-            external: ['vue'],
+            external: (id) => {
+                return id === 'vue' || id.includes('@vue-office/')
+            },
             output: [
                 {
                     globals: {

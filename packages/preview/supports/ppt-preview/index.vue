@@ -1,6 +1,5 @@
 <script lang='ts' setup>
-import VueOfficeDocx from '@vue-office/docx'
-import '@vue-office/docx/lib/index.css'
+import VueOfficePptx from '@vue-office/pptx'
 import {ref, watch} from 'vue'
 import type {PreviewProps} from '../../preview.interface'
 import {getFileRenderByFile} from '../../utils/utils'
@@ -25,22 +24,22 @@ watch(
 )
 
 function renderedHandler(): void {
-  console.log('渲染完成')
+  console.log('PPT渲染完成')
 }
 
 function errorHandler(): void {
-  console.log('渲染失败')
+  console.log('PPT渲染失败')
 }
 </script>
 
 <template>
-  <div class="docx-preview">
-    <VueOfficeDocx :src="fileRender" @rendered="renderedHandler" @error="errorHandler"/>
+  <div class="ppt-preview">
+    <VueOfficePptx :src="fileRender" @rendered="renderedHandler" @error="errorHandler"/>
   </div>
 </template>
 
 <style scoped lang='scss'>
-.docx-preview {
+.ppt-preview {
   width: 100%;
   height: 100vh;
   overflow: auto;
