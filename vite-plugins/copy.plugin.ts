@@ -11,47 +11,47 @@ export function copyPackageJsonPlugin(): Plugin {
                 const distPackageJson = {
                     name: packageJson.name,
                     version: packageJson.version,
-                    main: './es/packages/index.mjs',
-                    module: './es/packages/index.mjs',
+                    main: './es/index.mjs',
+                    module: './es/index.mjs',
                     types: './types/index.d.ts',
                     exports: {
                         '.': {
                             types: './types/index.d.ts',
-                            import: './es/packages/index.mjs',
-                            require: './lib/packages/index.js',
+                            import: './es/index.mjs',
+                            require: './lib/index.js',
                         },
                         './es': {
                             types: './types/index.d.ts',
-                            import: './es/packages/index.mjs',
+                            import: './es/index.mjs',
                         },
                         './lib': {
                             types: './types/index.d.ts',
-                            require: './lib/packages/index.js',
+                            require: './lib/index.js',
                         },
-                        './es/packages/*.mjs': {
+                        './es/*.mjs': {
                             types: './types/*.d.ts',
-                            import: './es/packages/*.mjs',
+                            import: './es/*.mjs',
                         },
-                        './lib/packages/*.js': {
+                        './lib/*.js': {
                             types: './types/*.d.ts',
-                            require: './lib/packages/*.js',
+                            require: './lib/*.js',
                         },
-                        './es/packages/*': {
+                        './es/*': {
                             types: [
                                 './types/*.d.ts',
                                 './types/index.d.ts',
                             ],
-                            import: './es/packages/*.mjs',
+                            import: './es/*.mjs',
                         },
-                        './lib/packages/version.js': {
+                        './lib/version.js': {
                             types: './types/version.d.ts',
-                            require: './lib/packages/version.js',
+                            require: './lib/version.js',
                         },
-                        './es/packages/version.mjs': {
+                        './es/version.mjs': {
                             types: [
                                 './types/version.d.ts',
                             ],
-                            import: './es/packages/version.mjs',
+                            import: './es/version.mjs',
                         },
                         './*': './*',
                     },
