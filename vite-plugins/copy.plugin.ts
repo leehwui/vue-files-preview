@@ -53,6 +53,8 @@ export function copyPackageJsonPlugin(): Plugin {
                             ],
                             import: './es/version.mjs',
                         },
+                        './es/style.css': './es/style.css',
+                        './lib/style.css': './lib/style.css',
                         './*': './*',
                     },
                     peerDependencies: packageJson.peerDependencies,
