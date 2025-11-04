@@ -48,7 +48,16 @@ export default defineConfig({
         },
         rollupOptions: {
             external: (id) => {
-                return id === 'vue' || id.includes('@vue-office/')
+                // Externalize vue, all @vue-office packages, and all other dependencies
+                return id === 'vue' || 
+                       id.includes('@vue-office/') ||
+                       id.includes('codemirror') ||
+                       id.includes('epubjs') ||
+                       id.includes('markdown-it') ||
+                       id.includes('highlight.js') ||
+                       id.includes('@vueuse/core') ||
+                       id.includes('vue-demi') ||
+                       id.includes('@xmldom/xmldom')
             },
             output: [
                 {
