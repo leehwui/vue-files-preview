@@ -19,6 +19,10 @@ xlsx, pdf, image, txt, epub, markdown, code, etc
 Project
 repository: [https://github.com/VueFilesPreview/vue-files-preview](https://github.com/VueFilesPreview/vue-files-preview)
 
+> **Note**: This is a forked repository with the following enhancements:
+> - ✨ Added support for PPTX file preview
+> - 🐛 Fixed styling issues when displaying XLSX files
+
 ## 🚀 Features
 
 - [ ] Feat `CDN` support
